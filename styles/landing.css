@@ -34,17 +34,29 @@
      position: relative;
      padding: 2rem;
      text-align: center;
-     opacity: 0;
+     opacity: .5;
      -webkit-transform: scaleX(0.9) translateY(3rem);
      -moz-transform: scaleX(0.9) translateY(3rem);
      transform: scaleX(0.9) translateY(3rem);
-     -webkit-transition: all 0.25s ease-in-out;
-     -moz-transition: all 0.25s ease-in-out;
-     transition: all 0.25s ease-in-out;
-     -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-     transition-delay: 0.2s;
+     -webkit-transition: all .25s ease-in-out;
+     -moz-transition: all.25s ease-in-out;
+     transition: all .25s ease-in-out;
+     -webkit-transition-delay: .2s;
+     -moz-transition-delay: .2s;
+     transition-delay: .2s;
  }
+
+.point:hover {
+    opacity: 1;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-transform: all .1s ease;
+    background-color: white;
+    color: rgb(233,50,117);
+    font-display: fallback;
+}
 
  .point .point-title {
      font-size: 1.25rem;
