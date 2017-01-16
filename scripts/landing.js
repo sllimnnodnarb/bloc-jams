@@ -1,4 +1,4 @@
- var pointsArray = document.getElementsByClassName('point');
+var pointsArray = document.getElementsByClassName('point');
  
 
 var revealPoint = function (point) {
