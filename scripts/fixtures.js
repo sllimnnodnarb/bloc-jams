@@ -1,15 +1,15 @@
 var albumPicasso = {
-     title: 'The Colors',
-     artist: 'Pablo Picasso',
-     label: 'Cubism',
-     year: '1881',
-     albumArtUrl: 'assets/images/album_covers/01.png',
+     title: 'Counting Colors',
+     artist: 'Sir Counts-A-Lot',
+     label: 'Sesame Seed',
+     year: '2017',
+     albumArtUrl: 'assets/images/album_covers/count.jpg',
      songs: [
-         { title: 'Blue', duration: '4:26' },
-         { title: 'Green', duration: '3:14' },
-         { title: 'Red', duration: '5:01' },
-         { title: 'Pink', duration: '3:21' },
-         { title: 'Magenta', duration: '2:15' }
+         { title: 'Blue', duration: '4:26', audioUrl: 'assets/music/bloc_jams_music/music' },
+         { title: 'Green', duration: '3:14', audioUrl: 'assets/music/bloc_jams_music/green' },
+         { title: 'Red', duration: '5:01', audioUrl: 'assets/music/bloc_jams_music/red' },
+         { title: 'Pink', duration: '3:21', audioUrl: 'assets/music/bloc_jams_music/pink' },
+         { title: 'Magenta', duration: '2:15', audioUrl: 'assets/music/bloc_jams_music/magenta' }  
      ]
  };
  
@@ -28,17 +28,3 @@ var albumPicasso = {
      ]
  };
 
-var albumCounts = {
-     title: 'Numbers',
-     artist: 'Sir Counts-A-Lot',
-     label: 'EM',
-     year: '2017',
-     albumArtUrl: 'assets/images/album_covers/count.jpg',
-     songs: [
-         { title: 'One', duration: '0:01' },
-         { title: 'Two', duration: '0:02' },
-         { title: 'Three', duration: '0:03'},
-         { title: 'Four', duration: '0:04' },
-         { title: 'Five', duration: '0:05'}
-     ]
- };
