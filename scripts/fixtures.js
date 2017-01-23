@@ -5,11 +5,11 @@ var albumPicasso = {
      year: '2017',
      albumArtUrl: 'assets/images/album_covers/count.jpg',
      songs: [
-         { title: 'Blue', duration: '4:26', audioUrl: 'assets/music/bloc_jams_music/music' },
-         { title: 'Green', duration: '3:14', audioUrl: 'assets/music/bloc_jams_music/green' },
-         { title: 'Red', duration: '5:01', audioUrl: 'assets/music/bloc_jams_music/red' },
-         { title: 'Pink', duration: '3:21', audioUrl: 'assets/music/bloc_jams_music/pink' },
-         { title: 'Magenta', duration: '2:15', audioUrl: 'assets/music/bloc_jams_music/magenta' }  
+         { title: 'Blue', duration: '24.0', audioUrl: 'assets/music/bloc_jams_music/music' },
+         { title: 'Green', duration: '103.96', audioUrl: 'assets/music/bloc_jams_music/green' },
+         { title: 'Red', duration: '268.45', audioUrl: 'assets/music/bloc_jams_music/red' },
+         { title: 'Pink', duration: '153.14', audioUrl: 'assets/music/bloc_jams_music/pink' },
+         { title: 'Magenta', duration: '374.22', audioUrl: 'assets/music/bloc_jams_music/magenta' }  
      ]
  };
  

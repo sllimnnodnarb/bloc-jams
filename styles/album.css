@@ -103,30 +103,7 @@ body.album {
      }
  }
 
-.play-pause .ion-play {
-     
-     font-size: 34px;
-     color: white;
-     border-radius: 50% 50%;
-     width: 28px;
-     height: 28px;
-}
 
-.play-pause .ion-play:hover {
-    cursor: pointer;
-    color: rgb(210, 40, 123);   
-}
-
-.previous .ion-skip-backward:hover {
-    cursor: pointer;
-    color: rgb(210, 40, 123);   
-}
-
-.next .ion-skip-forward:hover {
-    cursor: pointer;
-    color: rgb(210, 40, 123);
-    transform: translateX(15px);
-}
 
 
 
