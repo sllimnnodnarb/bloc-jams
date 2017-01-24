@@ -25,7 +25,8 @@ var getSongNumberCell = function(number) {
 
 
 var createSongRow = function(songNumber, songName, songLength) {
-     var template =
+    songLength = filterTimeCode(songLength); 
+    var template =
        '<tr class="album-view-song-item">'
      + '  <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
      + '  <td class="song-item-title">' + songName + '</td>'
@@ -147,6 +148,7 @@ var updatePlayerBarSong = function() {
     $('.currently-playing .artist-name').text(currentAlbum.artist);
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
     $('.main-controls .play-pause').html(playerBarPauseButton);
+    setTotalTimeInPlayerBar(currentSongFromAlbum.duration);
 };
 
 var nextSong = function() {
@@ -239,17 +241,44 @@ var togglePlayFromPlayerBar = function(){
 
 var updateSeekBarWhileSongPlays = function() {
      if (currentSoundFile) {
-         // #10
          currentSoundFile.bind('timeupdate', function(event) {
-             // #11
+             
              var seekBarFillRatio = this.getTime() / this.getDuration();
              var $seekBar = $('.seek-control .seek-bar');
  
              updateSeekPercentage($seekBar, seekBarFillRatio);
+             setCurrentTimeInPlayerBar(this.getTime());
          });
      }
+    
  };
 
+var setCurrentTimeInPlayerBar = function(currentTime) {
+  var $currentTime = $('.seek-control .current-time');
+  $currentTime.text(filterTimeCode(currentTime));
+};
+
+var setTotalTimeInPlayerBar = function(totalTime) { 
+     var $totalTime = $('.seek-control .total-time');
+    $totalTime.text(filterTimeCode(totalTime)); 
+ };
+
+var filterTimeCode = function(timeInSeconds) {
+     var seconds = Number.parseFloat(timeInSeconds);
+     var wholeSeconds = Math.floor(seconds);
+     var minutes = Math.floor(wholeSeconds / 60);
+     
+     var remainingSeconds = wholeSeconds % 60;
+     var output = minutes + ':';
+     
+     if (remainingSeconds < 10) {
+         output += '0';   
+     }
+     
+     output += remainingSeconds;
+     return output;
+ };
+     
 var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
     var offsetXPercent = seekBarFillRatio * 100;
     // #1
@@ -299,6 +328,7 @@ var setupSeekBars = function() {
      });
 
  };
+
 
 
 
